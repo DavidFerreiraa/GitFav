@@ -1,0 +1,164 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    font-size: 62.5%;
+
+    --ff-primary: "Poppins", sans-serif;
+    --tt-color: #303030;
+
+    --hue: 194;
+    --primary-color: hsl(var(--hue), 100%, 63%);
+
+    --bd-search: #CCC;
+    --odd-tr-bg-color: #DDD;
+    --even-tr-bg-color: #EEE;
+}
+
+body * {
+    font-family: var(--ff-primary);
+}
+
+body {
+    font-size: 1.6rem;
+    color: var(--tt-color);
+    background-color: rgb(250, 254, 255);
+}
+
+#app {
+    max-width: 50rem;
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    margin: 2.5rem 0;
+}
+
+header h1 {
+    font-size: 2rem;
+    text-transform: uppercase;
+}
+
+.search {
+    display: flex;
+    align-items: center;
+}
+
+.search input {
+    height: 3.2rem;
+
+    padding: 0 .8rem;
+
+    border: 1px solid var(--bd-search);
+    border-radius: .4rem 0 0 .4rem;
+}
+
+.search button {
+    height: 3.2rem;
+
+    padding: 0 1rem;
+
+    background-color: var(--primary-color);
+
+    border-radius: 0 .4rem .4rem 0;
+
+    cursor: pointer;
+}
+
+.search button:hover {
+    filter: brightness(1.1)
+}
+
+button {
+    border: none;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+
+    box-shadow: 0 1rem 2rem -1rem rgba(0, 0, 0, 0.3);
+}
+
+table * {
+    font-size: 1.4rem;
+    color: var(--tt-color);
+}
+
+table th {
+    padding: 1.5rem;
+
+    background-color: var(--primary-color);
+
+    text-align: left;
+    font-weight: normal;
+}
+
+table th:first-child {
+    border-top-left-radius: .4rem;
+}
+
+table th:last-child {
+    border-top-right-radius: .4rem;
+}
+
+table tr:nth-child(even) {
+    background-color: var(--even-tr-bg-color);
+}
+
+table tr:nth-child(odd) {
+    background-color: var(--odd-tr-bg-color);
+}
+
+table td {
+    padding: 1.5rem;
+    text-align: left;
+}
+
+td.user {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+td.user img {
+    width: 5rem;
+    height: 5rem;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+td.user a {
+    text-decoration: none;
+}
+
+td.user a p {
+    font-weight: bold;
+}
+
+td .remove {
+    background: none;
+    color: red;
+}
+
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border-width: 0;
+}
