@@ -149,6 +149,7 @@ td.user a p {
 td .remove {
     background: none;
     color: red;
+    cursor: pointer;
 }
 
 .sr-only {
